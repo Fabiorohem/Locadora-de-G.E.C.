@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	   background-image: url(imagem.jpg);
+	   background-repeat: no-repeat;
+	   background-attachment: fixed;
+	 } 
+
+/* CSS reset - retira todas as margens externas e internas DEFAULT das tags */ 
+body,h1,h2,h3,p { margin: 0; padding:0; } 
+
+/* caixa que envolve todo o contéudo 
+deve ser definido a largura da página e a caixa pode ser centralizada através de margin:auto*/
+#container  { width:760px; 
+			  margin:auto; } 
+			  
+
+/* div topo - margem interna, texto centralizado e imagem de fundo */
+#topo { padding: 40px 0;
+		text-align: center;
+		background-image:url(locadora-2.jpg);  } 
+
+/*=====INÍCIO MENU==================================*/
+		
+/* retira a aparência default da lista */		
+#menu ul { margin:0; padding:0; list-style-type:none; } 
+
+#menu ul li { 
+	float:left; } /* tb funciona com display inline-block*/
+
+/* poderia ser tb #menu a */
+#menu ul li a { 
+  display:block; 
+  padding:5px; /* esse valor deve ser diminuido da largura */
+  color:#060;
+  background-color:#FF4500;
+  width:116.667px; /* 760px/6itens = 126.6px - 10px(padding) */
+  text-align:center; 
+}
+
+#menu ul li a:hover {
+	color:#FF6; 
+	background-color:#080;
+	text-decoration:none; /* retira o sublinhado */ 
+}
+
+#menu ul li a.ativo { font-weight:bold; }
+
+/*=====FIM MENU==================================*/
+
+/* cor de fundo sobrepõe a cor do body - padding -> margem interna */ 
+#principal { clear:both; /* evita o "contágio" float do menu */
+			 background-color: #FFF; 
+			 padding: 10px;  } 
+			 
+#rodape { text-align: center;
+		  background-color:#FC6; } 
+
+/* somente h1 que está dentro do topo fica branco */
+#topo h1 { color:#FFF; 
+		    font-size: 2em; } 
+			
+#rodape p { color: #006 } 
+
+/* classes para imagens */ 
+
+img.direita { float: right; 
+			  margin-left: 10px;} 
+img.esquerda { float: left; 
+			   margin-right: 10px; } 
+
+/* CSS para tags */ 
+
+h1 { margin: 10px 0; 
+	 font-size: 1.5em;  /* equivale a 24px */
+	 color:#063; }
+	  
+h2 { margin: 10px 0 5px; 
+	 font-size: 1.2em;  /* equivale a 19px */
+	 color:#093; }
+	  
+h3 { margin: 10px 0 5px; 	
+	 font-size: 1.1em;  /* equivale a 17px */
+	 color:#F60; }
+	 
+/* p, li significa que P E li terão esta aparência */	  
+p,li { font-size: 0.9em; 
+	   color:#666;
+	   line-height:1.5em; }
+	   
+p.only:first-letter { font-size: 1.3em; 
+		  		 color:#000; } 
+		
+p:first-letter { font-size: 1em;
+				 color:#000; }
+
+/*	CSS contextual - somente aplicado em determinado contexto 
+	determinado pelo uso do espaço em branco
+	somente aplicado em texto negrito E itálico */
+strong em, em strong { color:#F00; } 
+
+/* classe precisa ser aplicada na(s) tag(s)
+   a aparência definida na classe sobrepõe a aparência definida na tag 
+   .destaque { background-color:#FF0; color:#00C; } */
+   
+/* neste caso a classe só funcionará para a tag span */
+span.destaque { background-color:#FF0; color:#00C; }  
+
+/* a:hover e a:visited herdam os atributos definidos para tag A
+	o que for definido diretamente em cada um, sobrepõe o atributo de A */
+a { color: #F60; 
+	text-decoration: none;
+	fonte-weight: bold;}
+	 
+a:hover { text-decoration: underline; } /* quando passa o mouse por cima, o link é sublinado */
+
+a:visited { color:#696; } 
